@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+*{
+    padding: 0;
+    margin: 0; 
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    background:conic-gradient(from .5turn at 0% 0%, #00c476, 10%, #82b0ff, 90%, #00c476);
+    background-attachment: fixed;
+    position: relative;
+
+}
+
+header{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 30;        /*ths is used to overcome the problem of overlap between flashcards that are created dynamically */
+    background: conic-gradient(from .5turn at bottom center, lightblue, white);
+}
+
+.nav{
+    /* font-family: "Mumblers Demo"; */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+    padding: 20px 0;
+    /* background-color: white; */
+}
+
+button{
+    padding: 8px;
+    margin: 0 2px;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid yellowgreen;
+    border-radius: 5px;
+    background: conic-gradient(from .5turn at 50% 110%, white, orange);
+    transform: scale(1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.nav  button{
+    font-family: inherit;
+}
+
+button:hover{
+    transform: scale(1.1);
+    background: conic-gradient(from -135deg at -10% center, #ffa500, #ff7715, #ff522a, #ff3f47, #ff5482, #ff69b4);
+    font-weight: bold;
+}
+
+button:active{                 /* this does when the button click decrease the size by 10%*/
+    transform: scale(0.9);
+}
+
+.container{
+    width: 95%;
+    margin: auto;
+}
+
+/* .create-box, .flashcards{
+    margin: auto;
+    margin-top: 95px;
+} */
+
+.create-box{
+    width: 380px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.5)
+}
+
+.h2{
+    text-align: center;
+    color: balck;
+}
+
+.create-box textarea{
+    width: 100%;
+    border-radius: 5px;
+    font-family: inherit;
+    border: 1px solid lightblue;
+    padding: 0 5px;
+}
+
+.flashcards{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    padding: 0px 10px;
+    cursor: pointer;
+}
+
+.flashcard{
+    width: 370px;
+    height: 200px;
+    margin: auto;
+    word-wrap: break-word;
+    margin: 10px;
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    position: relative;
+
+}
+
+.flashcard h2{
+    font-size: 1rem;
+}
+
+.fa-circle-xmark {
+    position: absolute;
+    top: 3%;
+    right: 2%;
+    color: #e13493cd;
+    transition: transform 0.2s ease-in-out;
+}
+
+.fa-circle-xmark:hover{
+    color: red;
+}
+
+@media(max-width: 843px){
+    .flashcard{
+        margin: auto;
+    }
+
+    .flashcard{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+}
+
+@media(max-width: 480px){
+    .nav{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .create-box{
+        width: 100%;
+    }
+
+    .flashcard{
+        width: 100%;
+    }
+}
+
+.hidden{
+    display: none;
+}
+

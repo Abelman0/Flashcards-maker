@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="flashcard.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>📌|Flashcard|🏷️</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="nav"> 
+                <h1>Flashcard-Maker |</h1>
+                <div class="navbtn">
+                    <button  id="show_CreateBox">Card Maker</button>
+                    <button id="del_FlashCards">Del Cards</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </header>
+
+    <section>
+    <div class="container"> 
+        <div class="create-box hidden">
+            <h2 class="h2">Create Flashcards</h2>
+            <label for="question">Question</label>
+            <textarea id ="question"></textarea>
+            <br>
+            <label for="answers">Answers</label>
+            <textarea id ="answers"></textarea>
+        <div class="savecloselbtn">
+            <button  id="save_Flashcards">Save</button>
+            <button id="close_CreateBox">Close</button>
+        </div>
+
+        </div>
+    </div>
+    </section>
+
+    <section>
+    <div class="container">
+        <div class="flashcards"></div>
+    </div>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>
